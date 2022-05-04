@@ -39,9 +39,18 @@ const app = new Vue({
         text: "Compra la frutta",
         done: true
       }
-    ]
+    ],
+    newTodo: '',
+  },
 
-  }
+  methods: {
+    
+    rimuoviTodo(index) {
+
+      this.todos.splice(index, 1)
+    }
+
+  },
 
 })
 
