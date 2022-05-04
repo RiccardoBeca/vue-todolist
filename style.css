@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+ text-align: center;
+
+}
+
+.container h1 {
+  margin-top: 50px;
+}
+
+.nuovo-to-do {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.nuovo-to-do input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 250px;
+}
+
+
+.nuovo-to-do button {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.to-do-list-container {
+  margin: auto;
+  width: 60%;
+  background-color: rgb(221, 216, 216);
+}
+
+.to-do-list-container ul {
+  list-style: none;
+}
+
+.to-do-list-container ul li {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+}
