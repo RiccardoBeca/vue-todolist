@@ -19,8 +19,8 @@
 
     <!-- sezione input/bottone -->
     <div class="nuovo-to-do">
-      <input placeholder="Cosa devi fare?" type="text">
-      <button>Aggiungi</button>
+      <input v-model="newTodo" placeholder="Cosa devi fare?" type="text">
+      <button @click="aggiungiTodo()">Aggiungi</button>
     </div>
 
     <!-- sezione oggetti to-do list -->

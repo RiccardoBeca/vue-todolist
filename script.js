@@ -40,7 +40,12 @@ const app = new Vue({
         done: true
       }
     ],
-    newTodo: '',
+    newTodo: {
+      text: "",
+      done: false
+    }
+
+
   },
 
   methods: {
@@ -48,6 +53,12 @@ const app = new Vue({
     rimuoviTodo(index) {
 
       this.todos.splice(index, 1)
+    },
+
+    aggiungiTodo() {
+      if (this.newTodo.length > 1) {
+        this.todos.push(this.newTodo)
+      }
     }
 
   },

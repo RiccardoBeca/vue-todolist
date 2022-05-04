@@ -53,21 +53,9 @@ body {
   justify-content: space-between;
   border-bottom: 2px solid black;
 }
-/* 
 
-.not-done {
-  list-style: none;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 2px solid black;
-} */
 
 .done{
   text-decoration: line-through;
-  /* list-style: none;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 2px solid black; */
+
 }
