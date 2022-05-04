@@ -16,4 +16,34 @@ Predisporre un campo di input testuale e un pulsante “aggiungi”: cliccando s
 */
 
 
+const app = new Vue({
+
+  el: "#app",
+
+  data:{
+
+    todos: [
+      {
+        text: "Studia la OOP",
+        done: false
+      },
+      {
+        text: "Debugga codice",
+        done: true
+      },
+      {
+        text: "Allenati",
+        done: false
+      },
+      {
+        text: "Compra la frutta",
+        done: true
+      }
+    ]
+
+  }
+
+})
+
+
 

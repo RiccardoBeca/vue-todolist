@@ -26,19 +26,10 @@
     <!-- sezione oggetti to-do list -->
 
     <div class="to-do-list-container">
-      <ul>
-        <li>cosa da fare
+        <li v-for="(todo, index) in todos" :class="[todo.done==true ? 'done' : 'not-done']">{{todo.text}}
           <i class="fa-solid fa-xmark"></i>
         </li>
-        <li>cosa da fare
-          <i class="fa-solid fa-xmark"></i>
-        </li>
-        <li>cosa da fare
-          <i class="fa-solid fa-xmark"></i>
-        </li>
-        <li>cosa da fare
-          <i class="fa-solid fa-xmark"></i>
-        </li>
+      
       </ul>
     </div>
 
