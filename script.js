@@ -40,10 +40,7 @@ const app = new Vue({
         done: true
       }
     ],
-    newTodo: {
-      text: "",
-      done: false
-    }
+    newTodo: "",
 
 
   },
@@ -51,13 +48,17 @@ const app = new Vue({
   methods: {
     
     rimuoviTodo(index) {
-
-      this.todos.splice(index, 1)
+      this.todos.splice(index, 1);
     },
 
-    aggiungiTodo() {
+    aggiungiTodo(text) {
+      const newTodoAdded= {
+        text: this.newTodo,
+        done:false
+      }
       if (this.newTodo.length > 1) {
-        this.todos.push(this.newTodo)
+        this.todos.push(newTodoAdded);
+        this.newTodo= " "
       }
     }
 
