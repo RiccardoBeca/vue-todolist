@@ -29,7 +29,7 @@ const app = new Vue({
       },
       {
         text: "Debugga codice",
-        done: true
+        done: false
       },
       {
         text: "Allenati",
@@ -40,7 +40,10 @@ const app = new Vue({
         done: true
       }
     ],
-    newTodo: "",
+    newTodo: {
+      text:"",
+      done: false
+    }
 
 
   },
@@ -52,14 +55,19 @@ const app = new Vue({
     },
 
     aggiungiTodo(text) {
-      const newTodoAdded= {
-        text: this.newTodo,
-        done:false
+      // const newTodoAdded= {
+      //   text: this.newTodo,
+      //   done:false
+      // }
+      if (this.newTodo.text.length > 1) {
+        // uso le graffe e i puntini per fare spread
+        this.todos.push({...this.newTodo});
+        this.newTodo.text="";
       }
-      if (this.newTodo.length > 1) {
-        this.todos.push(newTodoAdded);
-        this.newTodo= " "
-      }
+    },
+
+    todoDone(index) {
+      this.todos[index].done = !this.todos[index].done;
     }
 
   },

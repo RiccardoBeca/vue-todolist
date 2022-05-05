@@ -19,7 +19,7 @@
 
     <!-- sezione input/bottone -->
     <div class="nuovo-to-do">
-      <input v-model.trim="newTodo" placeholder="Cosa devi fare?" type="text">
+      <input v-model.trim="newTodo.text" placeholder="Cosa devi fare?" type="text">
       <button @click="aggiungiTodo">Aggiungi</button>
     </div>
 
@@ -27,7 +27,8 @@
 
     <div class="to-do-list-container">
       <ul v-if="todos.length > 0">
-        <li v-for="(todo, index) in todos" :class="[todo.done==true ? 'done' : '']">{{todo.text}}
+        <li  v-for="(todo, index) in todos" :class="[todo.done==true ? 'done' : '']" @click="todoDone(index)">
+          <span>{{todo.text}}</span>
           <i @click="rimuoviTodo(index)" class="fa-solid fa-xmark"></i>
         </li>
       
